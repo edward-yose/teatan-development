@@ -22,3 +22,6 @@ Route::get('/aboutus', function () {
 Route::get('/menu', function () {
     return view('menu');
 });
+Route::get('/home', function () {
+    return view('home');
+});
