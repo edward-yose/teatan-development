@@ -20,7 +20,7 @@ class TransactionDetailTable extends Migration
             $table->double('totalPrice',10);
             $table->string('note',255);
 
-            $table->foreign('productId')->references('id')->on('drink');
+            $table->foreign('productId')->references('id')->on('product');
         });
     }
    

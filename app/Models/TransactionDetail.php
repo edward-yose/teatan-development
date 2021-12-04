@@ -11,8 +11,8 @@ class TransactionDetail extends Model
     protected $table= "transactionDetail";
     protected $fillable = [];
 
-    public function drink(){
-        return $this->hasmany(Drink::class);
+    public function product(){
+        return $this->hasmany(Product::class);
     }
     public function transactionHeader(){
         return $this->hasOne(transactionHeader::class);

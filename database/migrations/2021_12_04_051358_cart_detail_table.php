@@ -21,7 +21,7 @@ class CartDetailTable extends Migration
             $table->string('note',255);
 
             $table->foreign('cartId')->references('id')->on('cart');
-            $table->foreign('productId')->references('id')->on('drink'); 
+            $table->foreign('productId')->references('id')->on('product'); 
         });
     }
 
