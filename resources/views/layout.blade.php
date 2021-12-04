@@ -19,12 +19,11 @@
             margin: 0;
             background-color: #FF5C00;
             font-size: 25px;
-            padding-right: 2%
+            
        }
        .footer{
             display: flex;
             flex-direction: column;
-            margin-top: 1rem;
             background-color: #FF5C00;
                 
        }
@@ -55,7 +54,7 @@
                 <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-right:3%" >
                 <ul class="navbar-nav ml-auto " >
                     <li class="nav-item active">
                         <a class="nav-link active"style="color: white" href="/"> <p>Home</p>  <span class="sr-only">(current)</span></a>
@@ -73,10 +72,12 @@
             </div>
         </nav>
         @yield('content')
-    </div>
-        
+
+    </body>
+    </footer>
+    
         <div class="footer text-center">
-               <p style="font-size:20px;"> Follow us at:</p>
+            <p style="font-size:20px;"> Follow us at:</p>
             <a class="" href="https://www.instagram.com/the_tea_tan/" >
                 <img src="{{Storage::url('ig.png')}}" alt="">
             </a>
@@ -85,6 +86,5 @@
                 <a class="text-dark" href="\">TeaTan</a>
             </div>
 
-        </div>
-    </body>
+    </footer>
 </html>
