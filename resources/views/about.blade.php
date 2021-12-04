@@ -26,7 +26,7 @@
     }
 </style>
 
-<div class="aboutUs"style="background-color: #FBC095">
+<div class="aboutUs"style="background-color: #FBC095;">
     <div class="container" >
         <img src="{{Storage::url('banner.png')}}" alt="">
         <div class="about" >
