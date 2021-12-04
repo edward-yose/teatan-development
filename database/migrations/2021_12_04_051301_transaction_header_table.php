@@ -15,7 +15,7 @@ class TransactionHeaderTable extends Migration
     {
         Schema::create('transactionHeader', function (Blueprint $table) {
             $table->bigIncrements('id',10);
-            $table->bigInteger('paymentId',10);
+            $table->UnsignedbigInteger('paymentId');
             $table->String('address', 255);
             $table->Date('transactionDate');
             $table->Double('total',10);

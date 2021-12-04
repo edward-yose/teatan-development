@@ -15,7 +15,7 @@ class TransactionDetailTable extends Migration
     {
         Schema::create('transactionDetail', function (Blueprint $table) {
             $table->bigIncrements('id',10);
-            $table->bigInteger('productId',5);
+            $table->UnsignedbigInteger('productId',10);
             $table->bigInteger('quantity', 5);
             $table->double('totalPrice',10);
             $table->string('note',255);
