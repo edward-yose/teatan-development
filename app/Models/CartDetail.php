@@ -14,7 +14,7 @@ class CartDetail extends Model
     public function cart(){
         return $this->hasOne(Cart::class);
     }
-    public function drink(){
-        return $this->hasMany(Drink::class);
+    public function product(){
+        return $this->hasMany(Product::class);
     }
 }

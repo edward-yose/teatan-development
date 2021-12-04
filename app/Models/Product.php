@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Drink extends Model
 {
     use HasFactory;
-    protected $table= "drink";
+    protected $table= "product";
     protected $fillable = [];
 
     public function transactionDetail(){
