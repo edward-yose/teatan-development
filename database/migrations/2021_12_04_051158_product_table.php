@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class DrinkTable extends Migration
+class ProductTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class DrinkTable extends Migration
      */
     public function up()
     {
-        Schema::create('drink', function (Blueprint $table) {
+        Schema::create('product', function (Blueprint $table) {
             $table->bigIncrements('id',10);
             $table->String('name',255);
             $table->Double('price', 10);
