@@ -9,9 +9,11 @@
 </p>
 
 ## About teatan development
-Teatan adalah aplikasi teh kekinian yang beneran online, no buka-buka store, tehnya bukan sekedar teh biasa
+Teatan adalah sebuah produk minuman yang berupa teh kekinian yang ditujukan untuk semua orang dan seluruh usia.
+Teatan merupakan sebuah produk yang berbeda dari produk yang sudah ada pada umumnya dikarenakan Teatan tidak membuka toko/store dimanapun dan dalam wujud apapun.
+Teatan beroperasi sepenuhnya secara online yang artinya, jika seorang customer ingin memesan produk Teatan, maka customer dapat mengunjugi website resmi Teatan
 
-Tim terdiri dari 5 Bangsawan
+TeaTan didirikan oleh 5 orang, yaitu:
 - 2301853924 - Danny Yongky Yefferson
 - 2301877470 - Edward Yose
 - 2301863585 - Patricia Citranegara Kusuma
