@@ -9,7 +9,7 @@
         background-color: #F2AAAA;
         padding: 2rem;
         border-radius:1rem;
-        
+
     }
     .menucard{
         background-color: #FBC095;
@@ -55,36 +55,39 @@
             </div>
         </div>
         <div class="row " style="padding-top: 1rem">
+            @foreach($drinks as $drink)
             <div class="col-sm-4" >
                 <div class="card" style="width: 18rem;background-color: #FBC095;" >
                     <img class="card-img-top mx-auto"  style="width:60%;" src="{{Storage::url('ThaiTea.png')}}" alt="Card image cap">
                     <div class="card-body" style="background-color: #FF5C00;">
-                        <p class="card-text">UltimaThai tea</p>
-                        <h5 class="card-title">This refreshing thai tea will make you miss the times when thai tea was booming in Indonesia. </h5>
+                        <p class="card-text">{{$drink->name}}</p>
+                        <h5 class="card-title">T{{$drink->description}}</h5>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4" >
-                <div class="card" style="width: 18rem;background-color: #FBC095;" >
-                    <img class="card-img-top mx-auto" style=" width:53%;" src="{{Storage::url('matcha.png')}}" alt="Card image cap">
-                    <div class="card-body" style="background-color: #FF5C00;">
-                        <p class="card-text">Matchazilla</p>
-                        <h5 class="card-title">  perfect for getting rid of the wear and tear caused by eating fried food but not buying a drink </h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4" >
-                <div class="card" style="width: 18rem;background-color: #FBC095;" >
-                    <img class="card-img-top mx-auto" style=" width:56%;" src="{{Storage::url('blushing.png')}}" alt="Card image cap">
-                    <div class="card-body" style="background-color: #FF5C00;">
-                        <p class="card-text">Blushing Tea</p>
-                        <h5 class="card-title">An extraordinary mix between strawberry and tea! Blushing tea can make you blushed! it's limted so grab it fast! </h5>
-                    </div>
-                </div>
-            </div>
+
+            @endforeach
+{{--            <div class="col-sm-4" >--}}
+{{--                <div class="card" style="width: 18rem;background-color: #FBC095;" >--}}
+{{--                    <img class="card-img-top mx-auto" style=" width:53%;" src="{{Storage::url('matcha.png')}}" alt="Card image cap">--}}
+{{--                    <div class="card-body" style="background-color: #FF5C00;">--}}
+{{--                        <p class="card-text">Matchazilla</p>--}}
+{{--                        <h5 class="card-title">  perfect for getting rid of the wear and tear caused by eating fried food but not buying a drink </h5>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-sm-4" >--}}
+{{--                <div class="card" style="width: 18rem;background-color: #FBC095;" >--}}
+{{--                    <img class="card-img-top mx-auto" style=" width:56%;" src="{{Storage::url('blushing.png')}}" alt="Card image cap">--}}
+{{--                    <div class="card-body" style="background-color: #FF5C00;">--}}
+{{--                        <p class="card-text">Blushing Tea</p>--}}
+{{--                        <h5 class="card-title">An extraordinary mix between strawberry and tea! Blushing tea can make you blushed! it's limted so grab it fast! </h5>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
     </div>
 </div>
-    
-    
+
+
     @endsection

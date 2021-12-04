@@ -19,9 +19,8 @@ class CartDetailTable extends Migration
             $table->unsignedbigInteger('productId');
             $table->bigInteger('quantity');
             $table->string('note',255);
-
-            $table->foreign('cartId')->references('id')->on('cart');
-            $table->foreign('productId')->references('id')->on('product'); 
+            $table->foreign('cartId')->references('id')->on('cart')->onDelete('cascade');;
+            $table->foreign('productId')->references('id')->on('product')->onDelete('cascade');;
         });
     }
 

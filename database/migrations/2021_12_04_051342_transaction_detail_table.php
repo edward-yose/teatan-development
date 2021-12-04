@@ -19,11 +19,10 @@ class TransactionDetailTable extends Migration
             $table->bigInteger('quantity');
             $table->double('totalPrice',10);
             $table->string('note',255);
-
-            $table->foreign('productId')->references('id')->on('product');
+            $table->foreign('productId')->references('id')->on('product')->onDelete('cascade');
         });
     }
-   
+
 
     /**
      * Reverse the migrations.

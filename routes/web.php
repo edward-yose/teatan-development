@@ -19,9 +19,5 @@ Route::get('/', function () {
 Route::get('/aboutus', function () {
     return view('about');
 });
-Route::get('/menu', function () {
-    return view('menu');
-});
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/menu', [\App\Http\Controllers\MenuController::class,'get'])->name('show-menu');
+Route::get('/home', [\App\Http\Controllers\HomeController::class,'get'])->name('show-home');
