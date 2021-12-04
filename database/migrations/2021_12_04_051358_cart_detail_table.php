@@ -14,17 +14,17 @@ class CartDetailTable extends Migration
     public function up()
     {
         Schema::create('cartDetail', function (Blueprint $table) {
-            $table->bigInteger('cartId',10);
-            $table->bigInteger('productId',10);
-            $table->bigInteger('quantity', 10);
+            $table->bigIncrements('Id');
+            $table->unsignedbigInteger('cartId');
+            $table->unsignedbigInteger('productId');
+            $table->bigInteger('quantity');
             $table->string('note',255);
 
-            $table->primary('cartId');
-            $table->primary('productId');
             $table->foreign('cartId')->references('id')->on('cart');
-            $table->foreign('productId')->references('id')->on('drink');
+            $table->foreign('productId')->references('id')->on('drink'); 
         });
     }
+
 
     /**
      * Reverse the migrations.
