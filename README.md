@@ -9,9 +9,9 @@
 </p>
 
 ## About teatan development
-Teatan adalah sebuah produk minuman yang berupa teh kekinian yang ditujukan untuk semua orang dan seluruh usia.
+Teatan adalah sebuah produk minuman berupa teh kekinian yang ditujukan untuk semua orang dan seluruh usia.
 Teatan merupakan sebuah produk yang berbeda dari produk yang sudah ada pada umumnya dikarenakan Teatan tidak membuka toko/store dimanapun dan dalam wujud apapun.
-Teatan beroperasi sepenuhnya secara online yang artinya, jika seorang customer ingin memesan produk Teatan, maka customer dapat mengunjugi website resmi Teatan
+Teatan beroperasi sepenuhnya secara online yang artinya jika seorang customer ingin memesan produk Teatan, customer dapat mengunjugi website resmi Teatan
 
 TeaTan didirikan oleh 5 orang, yaitu:
 - 2301853924 - Danny Yongky Yefferson
