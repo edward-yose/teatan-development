@@ -8,11 +8,10 @@
    
    <style>
        *{
-            font-family: sans-serif;
+            font-family:sans-serif;
        }
        img{
-           width: 20%;
-           height: 20%;
+           width: 70%;
        }
        .header{
             padding: 0%;
@@ -28,7 +27,7 @@
                 
        }
        .footer img{
-            width: 5%;
+            width: 3%;
             background-color: #FF5C00;
             padding-bottom: 0.5rem;
        }
@@ -47,7 +46,7 @@
         <nav class="navbar navbar-expand-lg navbar-light mr-md-0"  >
             <div class=navbar-head style="background-color: #FF5C00">
                 <a class="navbar-brand" href="/" style="color: white; font-size:50px"> 
-                    <img src="{{Storage::url('TeaTan.png')}}" alt="">TeaTan
+                    <img src="{{Storage::url('TeaTanFULL.png')}}" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
