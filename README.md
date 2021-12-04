@@ -1,11 +1,25 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
+
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+
+## About teatan development
+Teatan adalah sebuah produk minuman berupa teh kekinian yang ditujukan untuk semua orang dan seluruh usia.
+Teatan merupakan sebuah produk yang berbeda dari produk yang sudah ada pada umumnya dikarenakan Teatan tidak membuka toko/store dimanapun dan dalam wujud apapun.
+Teatan beroperasi sepenuhnya secara online yang artinya jika seorang customer ingin memesan produk Teatan, customer dapat mengunjugi website resmi Teatan
+
+TeaTan didirikan oleh 5 orang, yaitu:
+- 2301853924 - Danny Yongky Yefferson
+- 2301877470 - Edward Yose
+- 2301863585 - Patricia Citranegara Kusuma
+- 2301878012 - Stanley Dave Teherag
+- 2301885983 - Vincent Fanditama Wijaya
+
 
 ## About Laravel
 
