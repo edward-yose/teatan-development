@@ -32,3 +32,7 @@ Route::get('/register', function () {
 Route::get('/cart', function () {
     return view('cart');
 });
+
+Route::get('/editprofile', function () {
+    return view('editprofile');
+});
