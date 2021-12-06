@@ -41,6 +41,8 @@
 
 </style>
 
+<div class="editpro" style="background-color: wheat">
+
 
 <div class="container rounded bg-white mt-5">
     <div class="row">
@@ -54,6 +56,7 @@
             <div class="row mt-5">
                 <span class="text-black-50">email@email.com</span></div>
             </div> 
+            <div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="button">Log Out</button></div>
         </div>
         <div class="col-md-8">
             <div class="p-3 py-5">
@@ -84,12 +87,14 @@
                     <div class="col-md-6"><input type="password" class="form-control" value="" placeholder="Confirm Password"></div> 
                 </div> 
                 <div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+
+                
             </div>
         </div>
     </div>
 </div>
 
-
+</div>
 
 
 @endsection

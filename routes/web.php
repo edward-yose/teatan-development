@@ -36,3 +36,7 @@ Route::get('/cart', function () {
 Route::get('/editprofile', function () {
     return view('editprofile');
 });
+
+Route::get('/pay', function () {
+    return view('qris');
+});
