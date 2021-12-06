@@ -35,6 +35,7 @@
             background-color: #FF5C00;
             padding-bottom: 0.5rem;
         }
+
     </style>
 
 </head>
@@ -57,8 +58,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-right:3%">
-            <ul class="navbar-nav ml-auto ">
+        <div class="collapse navbar-collapse " id="navbarSupportedContent" style="padding-right:3%">
+            <ul class="navbar-nav ml-auto" >
                 <li class="nav-item active">
                     <a class="nav-link active" style="color: white" href="/"><p>Home</p>  <span class="sr-only">(current)</span></a>
                 </li>
@@ -71,6 +72,10 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="/" style="color: white"><p>About Us</p></a>
                 </li>
+                <a href="">
+                    {{-- link ke login kalo blm login kalo ud login link ke update profile --}}
+                    <button type="button" class="btn btn-primary btn-lg" >Login</button>
+                </a>
             </ul>
         </div>
     </nav>
