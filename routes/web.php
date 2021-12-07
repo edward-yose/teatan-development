@@ -21,3 +21,22 @@ Route::get('/aboutus', function () {
 });
 Route::get('/menu', [\App\Http\Controllers\MenuController::class,'get'])->name('show-menu');
 Route::get('/home', [\App\Http\Controllers\HomeController::class,'get'])->name('show-home');
+
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::get('/cart', function () {
+    return view('cart');
+});
+
+Route::get('/editprofile', function () {
+    return view('editprofile');
+});
+
+Route::get('/pay', function () {
+    return view('qris');
+});
