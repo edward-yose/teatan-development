@@ -60,11 +60,12 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body style="background-color: #FBC095;">
-  <div class="container">   
+  <div class="container">
     <div class="row">
       <div class="col-md-6 offset-md-3" >
         <!-- Sign Up form -->
-        <form style="background-color: #FF5C00;" action="" class="Signup">
+        <form style="background-color: #FF5C00;" action="{{route('create-user')}}" class="Signup" method="post">
+            @csrf
           <h3>Register Now!!!</h3>
           <div class="form-group">
               <label for="name">Full Name</label>
@@ -74,17 +75,17 @@
               <label for="email">Email</label>
             <input type="text" class="form-control" placeholder="Enter Email" name="email" required>
           </div>
-          <div class="form-group">
-            <label for="Phone">Phone Number</label>
-          <input type="tel" class="form-control" placeholder="0812-3456-7891" name="phone" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
-        </div>  
+{{--          <div class="form-group">--}}
+{{--            <label for="Phone">Phone Number</label>--}}
+{{--          <input type="tel" class="form-control" placeholder="0812-3456-7891" name="phone" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required>--}}
+        </div>
           <div class="form-group">
               <label for="psw">Password</label>
-            <input type="password" class="form-control" placeholder="Enter Password" name="psw" required> 
-          </div>   
+            <input type="password" class="form-control" placeholder="Enter Password" name="pass" required>
+          </div>
           <div class="form-group">
             <label for="psw-repeat">Repeat Password</label>
-            <input type="password" class="form-control" placeholder="Repeat Password" name="psw-repeat" required>
+            <input type="password" class="form-control" placeholder="Repeat Password" name="confirm_pass" required>
           </div>
           <div class="form-group">
             <label class="term-policy"><input type="checkbox"> By creating an account you agree to our <a href="#">Terms & Privacy</a>.</label>

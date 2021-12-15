@@ -25,9 +25,12 @@ Route::get('/home', [\App\Http\Controllers\HomeController::class,'get'])->name('
 Route::get('/login', function () {
     return view('login');
 });
+Route::post('/login', [\App\Http\Controllers\UserController::class, 'login'])->name('login');
+
 Route::get('/register', function () {
     return view('register');
 });
+Route::post('/register', [\App\Http\Controllers\UserController::class, 'create'])->name('create-user');
 
 Route::get('/cart', function () {
     return view('cart');
