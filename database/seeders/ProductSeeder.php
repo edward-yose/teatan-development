@@ -19,7 +19,7 @@ class ProductSeeder extends Seeder
             'name' => "UltimaThai tea",
             'price' => 20000,
             'description' => $faker->text,
-            'photo' => '1.jpg',
+            'photo' => 'ThaiTea.png',
             'availableStatus'=>true
         ]);
 
@@ -27,35 +27,35 @@ class ProductSeeder extends Seeder
             'name' => "Matchazilla",
             'price' => 20000,
             'description' => $faker->text,
-            'photo' => '2.jpg',
+            'photo' => 'matcha.png',
             'availableStatus'=>true
         ]);
         \DB::table('product')->insert([
             'name' => "Blushing tea",
             'price' => 25000,
             'description' => $faker->text,
-            'photo' => '3.jpg',
+            'photo' => 'blushing.png',
             'availableStatus'=>true
         ]);
         \DB::table('product')->insert([
             'name' => "BanTea",
             'price' => 20000,
             'description' => $faker->text,
-            'photo' => '4.jpg',
+            'photo' => 'BanTea.png',
             'availableStatus'=>true
         ]);
         \DB::table('product')->insert([
             'name' => "Toxic Tea",
             'price' => 20000,
             'description' => $faker->text,
-            'photo' => '5.jpg',
+            'photo' => 'Toxic.png',
             'availableStatus'=>true
         ]);
         \DB::table('product')->insert([
             'name' => "STM",
             'price' => 15000,
             'description' => $faker->text,
-            'photo' => '6.jpg',
+            'photo' => 'STM.png',
             'availableStatus'=>true
         ]);
     }
