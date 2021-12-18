@@ -74,7 +74,7 @@
                     <img class="card-img-top mx-auto"  style="width:60%;" src="{{url('/storage/'.$drink->photo)}}" alt="Card image cap">
                     <div class="card-body" style="background-color: #FF5C00;">
                         <p class="card-text">{{$drink->name}}</p>
-                        <h5 class="card-title">T{{$drink->description}}</h5>
+                        <h5 class="card-title">{{$drink->description}}</h5>
                     </div>
                 </div>
             </div>
