@@ -43,9 +43,9 @@
             @foreach($drinks as $drink)
             <div class="col-sm-4">
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{url('/storage/'.$drink->photo)}}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title" st>{{$drink->name}}</h5>
+                    <img class="card-img-top" style="background-color: #FBC095" src="{{url('/storage/'.$drink->photo)}}" alt="Card image cap">
+                    <div class="card-body" style="background-color: #FF5C00 ;color: white">
+                        <h5 class="card-title">{{$drink->name}}</h5>
                         <p class="card-text">{{$drink->description}}</p>
                         <a href="#" class="btn btn-primary">View Detail</a>
                     </div>
