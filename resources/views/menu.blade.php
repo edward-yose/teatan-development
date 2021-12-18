@@ -19,6 +19,21 @@
     .col-sm-4{
         padding-bottom: 1rem;
     }
+    .card .card-img-top{
+        width: 100%;
+        height: 40rem;
+        align-items: center;
+      
+    }
+    .card .card-title{
+        font-size: 2rem;
+        text-align: center;
+        font-weight: bold;
+        padding-top: 1rem;
+        padding-bottom: 1rem; 
+
+    }
+
 </style>
 
 
@@ -30,7 +45,7 @@
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="{{url('/storage/'.$drink->photo)}}" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">{{$drink->name}}</h5>
+                        <h5 class="card-title" st>{{$drink->name}}</h5>
                         <p class="card-text">{{$drink->description}}</p>
                         <a href="#" class="btn btn-primary">View Detail</a>
                     </div>
