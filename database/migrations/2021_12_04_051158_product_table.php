@@ -17,7 +17,7 @@ class ProductTable extends Migration
             $table->bigIncrements('id',10);
             $table->String('name',255);
             $table->Double('price', 10);
-            $table->string('description',255);
+            $table->text('description');
             $table->string('photo',255);
             $table->boolean('availableStatus');
         });
