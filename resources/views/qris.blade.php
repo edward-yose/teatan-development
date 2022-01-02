@@ -12,7 +12,7 @@
                 <h3>Please Pay using DANA/OVO/GOPAY/LinkAJA</h3>
                 <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-2000w,f_auto,q_auto:best/MSNBC/Components/Photo/_new/110322-qr-code-hmed-425p.jpg" style="width:300px; height: 300px;" alt=""> </div>
             <div class="card-body px-0" style="width: 150%; background-color: white">
-              <p class="text-center"><small><strong>Total: Rp </strong></small></p>
+              <p class="text-center"><small><strong>Total: Rp 150.000</strong></small></p>
               <p class="text-muted text-center">After payment your tea will be proceed !! <br>
                <br> Thank you for your purchase<br>
              </p>
