@@ -75,10 +75,6 @@
               <label for="email">Email</label>
             <input type="text" class="form-control" placeholder="Enter Email" name="email" required>
           </div>
-{{--          <div class="form-group">--}}
-{{--            <label for="Phone">Phone Number</label>--}}
-{{--          <input type="tel" class="form-control" placeholder="0812-3456-7891" name="phone" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required>--}}
-        </div>
           <div class="form-group">
               <label for="psw">Password</label>
             <input type="password" class="form-control" placeholder="Enter Password" name="pass" required>
@@ -90,7 +86,7 @@
           <div class="form-group">
             <label class="term-policy"><input type="checkbox"> By creating an account you agree to our <a href="#">Terms & Privacy</a>.</label>
           </div>
-          <button type="submit" class="btn btn-success">Signup</button>
+          <button type="submit" class="btn btn-primary">Sign up</button>
           <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
           <hr>
           <div class="form-group">
