@@ -47,7 +47,7 @@
                     <div class="card-body" style="background-color: #FF5C00 ;color: white">
                         <h5 class="card-title">{{$drink->name}}</h5>
                         <p class="card-text">{{$drink->description}}</p>
-                        <a href="#" class="btn btn-primary">View Detail</a>
+                        <a href="/cart/" class="btn btn-primary">Add to cart</a>
                     </div>
                 </div>
             </div>

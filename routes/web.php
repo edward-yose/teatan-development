@@ -13,9 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('layout');
-});
+
+Route::get('/', [\App\Http\Controllers\MenuController::class,'get'])->name('show-menu');
 Route::get('/aboutus', function () {
     return view('about');
 });
