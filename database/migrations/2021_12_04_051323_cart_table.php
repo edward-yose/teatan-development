@@ -16,6 +16,9 @@ class CartTable extends Migration
         Schema::create('cart', function (Blueprint $table) {
             $table->bigIncrements('id',10);
             $table->String('email', 255);
+            $table->unsignedbigInteger('productId');
+            $table->bigInteger('quantity');
+            $table->string('note',255);
             $table->Double('total',10);
             $table->foreign('email')->references('email')->on('users');
         });

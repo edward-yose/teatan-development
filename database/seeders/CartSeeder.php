@@ -15,11 +15,26 @@ class CartSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create('id_ID');
-        for($i=1; $i<=5; $i++){
             \DB::table('cart')->insert([
-                'email' => 'client'.$i.'@gmail.com',
-                'total' => $faker->numberBetween(11111,9999)
+                'email' => 'client1'.'@gmail.com',
+                'total' => $faker->numberBetween(11111,9999),
+                'productId'=>4,
+                'quantity'=>$faker->numberBetween(1,5),
+                'note'=> $faker->text
             ]);
-        }
+            \DB::table('cart')->insert([
+                'email' => 'client1'.'@gmail.com',
+                'total' => $faker->numberBetween(11111,9999),
+                'productId'=>2,
+                'quantity'=>$faker->numberBetween(1,5),
+                'note'=> $faker->text
+            ]);
+            \DB::table('cart')->insert([
+                'email' => 'client1'.'@gmail.com',
+                'total' => $faker->numberBetween(11111,9999),
+                'productId'=>3,
+                'quantity'=>$faker->numberBetween(1,5),
+                'note'=> $faker->text
+            ]);
     }
 }
