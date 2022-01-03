@@ -14,7 +14,4 @@ class Product extends Model
     public function transactionDetail(){
         return $this->hasOne(transactionDetail::class);
     }
-    public function cartDetail(){
-        return $this->hasOne(cartDetail::class);
-    }
 }

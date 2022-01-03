@@ -11,10 +11,8 @@ class Cart extends Model
     protected $table= "cart";
     protected $fillable = [];
 
-    public function client(){
-        return $this->hasOne(Client::class);
+    public function user(){
+        return $this->hasOne(User::class);
     }
-    public function cartDetail(){
-        return $this->hasMany(cartDetail::class);
-    }
+
 }
