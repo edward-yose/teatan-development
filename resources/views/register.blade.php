@@ -90,7 +90,7 @@
           <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
           <hr>
           <div class="form-group">
-            <p class="not-yet">Already have an account? <a href="#">Login</a></p>
+            <p class="not-yet">Already have an account? <a href="/login">Login</a></p>
           </div>
         </form>
       </div>

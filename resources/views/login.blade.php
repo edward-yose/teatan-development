@@ -31,6 +31,7 @@
             <div id="login-column" class="col-md-6">
                 <div class="login-box col-md-12">
                     <form id="login-form" class="form" action="{{'login'}}" method="post">
+                    @csrf
                         <h3 class="text-center">Login</h3>
                         <div class="form-group">
                             <label for="email" style="color: black">Email:</label><br>

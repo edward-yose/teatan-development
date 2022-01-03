@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
         for($i=1; $i<=5; $i++){
             \DB::table('users')->insert([
                 'email' => 'client'.$i.'@gmail.com',
-                'password' => $faker->password,
+                'password' => bcrypt('client123'),
                 'fullName' => $faker->name,
                 'phoneNumber' => '+628'.$faker->numberBetween(111111111,9999999)
             ]);
