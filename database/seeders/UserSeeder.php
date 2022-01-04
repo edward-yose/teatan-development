@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
 
-class ClientSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,9 +16,9 @@ class ClientSeeder extends Seeder
     {
         $faker = Faker::create('id_ID');
         for($i=1; $i<=5; $i++){
-            \DB::table('client')->insert([
+            \DB::table('users')->insert([
                 'email' => 'client'.$i.'@gmail.com',
-                'password' => $faker->password,
+                'password' => bcrypt('client123'),
                 'fullName' => $faker->name,
                 'phoneNumber' => '+628'.$faker->numberBetween(111111111,9999999)
             ]);
