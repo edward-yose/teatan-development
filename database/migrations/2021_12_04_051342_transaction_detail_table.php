@@ -17,8 +17,7 @@ class TransactionDetailTable extends Migration
             $table->bigIncrements('id',10);
             $table->unsignedbiginteger('productId');
             $table->bigInteger('quantity');
-            $table->double('totalPrice',10);
-            $table->string('note',255);
+            $table->double('total',10);
             $table->foreign('productId')->references('id')->on('product')->onDelete('cascade');
         });
     }

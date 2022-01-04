@@ -15,15 +15,12 @@ class TransactionHeaderTable extends Migration
     {
         Schema::create('transactionHeader', function (Blueprint $table) {
             $table->bigIncrements('id',10);
-            $table->UnsignedbigInteger('paymentId');
-            $table->String('address', 255);
-            $table->Date('transactionDate');
+            $table->string('email');
             $table->Double('total',10);
-            
-            $table->foreign('paymentId')->references('id')->on('payment');
+            $table->foreign('email')->references('email')->on('users');
         });
     }
-    
+
 
     /**
      * Reverse the migrations.

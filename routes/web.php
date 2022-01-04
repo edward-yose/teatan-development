@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 Route::get('/', [\App\Http\Controllers\MenuController::class,'get'])->name('show-menu');
 Route::get('/aboutus', function () {
     return view('about');
@@ -31,9 +30,9 @@ Route::get('/register', function () {
 });
 Route::post('/register', [\App\Http\Controllers\UserController::class, 'create'])->name('create-user');
 
-Route::get('/cart', function () {
-    return view('cart');
-});
+Route::get('/cart', [\App\Http\Controllers\CartController::class,'get']);
+
+Route::post('/checkout', [\App\Http\Controllers\CartController::class, 'checkout'])->name('checkout');
 
 Route::get('/editprofile', function () {
     return view('editprofile');
@@ -42,3 +41,10 @@ Route::get('/editprofile', function () {
 Route::get('/pay', function () {
     return view('qris');
 });
+
+Route::get('/payment', function () {
+    return view('payment');
+});
+
+Route::get('/addtocart/{id}', [\App\Http\Controllers\MenuController::class, 'addToCart'])->name('addToCart');
+

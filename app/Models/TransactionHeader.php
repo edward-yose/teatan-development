@@ -10,6 +10,7 @@ class TransactionHeader extends Model
     use HasFactory;
     protected $table= "transactionHeader";
     protected $fillable = [];
+    public $timestamps = false;
 
     public function payment(){
         return $this->hasOne(Payment::class);

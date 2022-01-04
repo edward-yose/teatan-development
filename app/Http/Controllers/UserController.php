@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -13,16 +14,15 @@ class UserController extends Controller
         $request->validate([
             'name' => ['required'],
             'email' => ['required'],
-            'pass' => ['required'],
-            'confirm_pass' => ['required', 'same:pass']
+            'password' => ['required'],
+            'password_confirmation' => ['required', 'same:password']
         ]);
-
 
         $user = new User();
 
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);
 
         $user->save();
 
@@ -30,14 +30,17 @@ class UserController extends Controller
     }
 
     public function login(Request $request){
+
+
         $request->validate([
            'email' => 'required',
            'password' => 'required'
         ]);
+
         $credential = $request->only(['email', 'password']);
 
         if(Auth::attempt($credential)){
-            return redirect()->intended('/');
+            return redirect()->route('show-home');
         }
 
         return redirect()->back();

@@ -23,14 +23,14 @@
         width: 100%;
         height: 40rem;
         align-items: center;
-      
+
     }
     .card .card-title{
         font-size: 2rem;
         text-align: center;
         font-weight: bold;
         padding-top: 1rem;
-        padding-bottom: 1rem; 
+        padding-bottom: 1rem;
 
     }
 
@@ -47,7 +47,10 @@
                     <div class="card-body" style="background-color: #FF5C00 ;color: white">
                         <h5 class="card-title">{{$drink->name}}</h5>
                         <p class="card-text">{{$drink->description}}</p>
-                        <a href="/cart/" class="btn btn-primary">Add to cart</a>
+                        <form action="{{route('addToCart', $drink->id)}}" method="get">
+                            @csrf
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </form>
                     </div>
                 </div>
             </div>

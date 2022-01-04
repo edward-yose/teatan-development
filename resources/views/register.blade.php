@@ -77,11 +77,11 @@
           </div>
           <div class="form-group">
               <label for="psw">Password</label>
-            <input type="password" class="form-control" placeholder="Enter Password" name="pass" required>
+            <input type="password" class="form-control" placeholder="Enter Password" name="password" required>
           </div>
           <div class="form-group">
             <label for="psw-repeat">Repeat Password</label>
-            <input type="password" class="form-control" placeholder="Repeat Password" name="confirm_pass" required>
+            <input type="password" class="form-control" placeholder="Repeat Password" name="password_confirmation" required>
           </div>
           <div class="form-group">
             <label class="term-policy"><input type="checkbox"> By creating an account you agree to our <a href="#">Terms & Privacy</a>.</label>
@@ -90,7 +90,7 @@
           <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
           <hr>
           <div class="form-group">
-            <p class="not-yet">Already have an account? <a href="#">Login</a></p>
+            <p class="not-yet">Already have an account? <a href="/login">Login</a></p>
           </div>
         </form>
       </div>

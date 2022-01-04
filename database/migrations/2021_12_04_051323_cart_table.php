@@ -17,7 +17,11 @@ class CartTable extends Migration
             $table->bigIncrements('id',10);
             $table->String('email', 255);
             $table->Double('total',10);
-            $table->foreign('email')->references('email')->on('client');
+            $table->unsignedbigInteger('productId');
+            $table->bigInteger('quantity');
+            $table->string('note',255);
+            $table->foreign('productId')->references('id')->on('product')->onDelete('cascade');;
+            $table->foreign('email')->references('email')->on('users');
         });
     }
 

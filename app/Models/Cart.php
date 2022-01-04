@@ -10,11 +10,16 @@ class Cart extends Model
     use HasFactory;
     protected $table= "cart";
     protected $fillable = [];
+    public $timestamps = false;
 
-    public function client(){
-        return $this->hasOne(Client::class);
+    public function users(){
+        return $this->hasOne(User::class);
     }
-    public function cartDetail(){
-        return $this->hasMany(cartDetail::class);
+
+    public function product(){
+        return $this->belongsTo(Product::class, 'productId');
     }
+
+
+
 }

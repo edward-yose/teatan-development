@@ -30,7 +30,8 @@
         <div id="login-row" class="row justify-content-center align-items-center" style="">
             <div id="login-column" class="col-md-6">
                 <div class="login-box col-md-12">
-                    <form id="login-form" class="form" action="{{'login'}}" method="post">
+                    <form id="login-form" class="form" action="{{route('login')}}" method="post">
+                        @csrf
                         <h3 class="text-center">Login</h3>
                         <div class="form-group">
                             <label for="email" style="color: black">Email:</label><br>
@@ -43,7 +44,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="remember-me" class="text-info"><span style="color: black">Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
+                            <label for="remember-me" class="text-info"><span style="color: black">Remember me</span> <span><input id="remember-me" name="remember" type="checkbox"></span></label><br>
                             <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
                         </div>
                         <div id="register-link" class="text-right">

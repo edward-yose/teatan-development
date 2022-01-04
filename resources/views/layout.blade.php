@@ -50,7 +50,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light mr-md-0">
         <div class=navbar-head style="background-color: #FF5C00">
-            <a class="navbar-brand" href="/home" style="color: white; font-size:50px">
+            <a class="navbar-brand" href="/" style="color: white; font-size:50px">
                 <img src="{{Storage::url('TeaTanFULL.png')}}" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -59,23 +59,29 @@
             </button>
         </div>
         <div class="collapse navbar-collapse " id="navbarSupportedContent" style="padding-right:3%">
-            <ul class="navbar-nav ml-auto" >
+            <ul class="navbar-nav ml-auto">
+                @if(\Illuminate\Support\Facades\Auth::user())
+                    <li class="nav-item active">
+                        <a class="nav-link active" style="color: white" href="{{route('show-home')}}"><p>Home</p>  <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link active" style="color: white" href="{{route('show-menu')}}"><p>Menu</p>  <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                @endif
                 <li class="nav-item active">
-                    <a class="nav-link active" style="color: white" href="/home"><p>Home</p>  <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/" style="color: white"><p>About Us</p></a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link active" style="color: white" href="/menu"><p>Menu</p>  <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link active" style="color: white" href="/pay"><p>Payment</p>  <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/aboutus" style="color: white"><p>About Us</p></a>
-                </li>
-                <a href="/login">
-                    {{-- link ke login kalo blm login kalo ud login link ke update profile --}}
-                    <button type="button" class="btn btn-primary btn-lg" >Login</button>
-                </a>
+                @if(\Illuminate\Support\Facades\Auth::guest())
+                    <a href="/login">
+                        <button type="button" class="btn btn-primary btn-lg">Login</button>
+                    </a>
+                @else
+                    <a href="/login">
+                        <button type="button" class="btn btn-primary btn-lg">Update Profile</button>
+                    </a>
+                @endif
             </ul>
         </div>
     </nav>
