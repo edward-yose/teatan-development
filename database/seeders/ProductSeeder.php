@@ -14,7 +14,7 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker::create('id_ID');
+        // $faker = Faker::create('id_ID');
         \DB::table('product')->insert([
             'name' => "UltimaThai tea",
             'price' => 20000,

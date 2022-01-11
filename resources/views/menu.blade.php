@@ -7,8 +7,9 @@
 <style>
     .container{
         background-color: #F2AAAA;
-        padding: 2rem;
-        border-radius:1rem;
+        padding: 2%;
+        border-radius: 1px;
+        max-width: auto;
 
     }
     .menucard{
@@ -33,6 +34,10 @@
         padding-bottom: 1rem;
 
     }
+    .p{
+        font-size: 14px;
+        
+    }
 
 </style>
 
@@ -41,7 +46,7 @@
     <div class="container">
         <div class="row ">
             @foreach($drinks as $drink)
-            <div class="col-sm-4">
+            <div class="col-md-4">
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" style="background-color: #FBC095" src="{{url('/storage/'.$drink->photo)}}" alt="Card image cap">
                     <div class="card-body" style="background-color: #FF5C00 ;color: white">

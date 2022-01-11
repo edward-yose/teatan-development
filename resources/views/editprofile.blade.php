@@ -9,6 +9,11 @@
     background: #BA68C8
 }
 
+#email_desc{
+    font-size: 16px;
+    align-content: flex-end;
+}
+
 .form-control:focus {
     box-shadow: none;
     border-color: #BA68C8
@@ -53,8 +58,8 @@
             <div class="row mt-2">
                 <span class="font-weight-bold">{{$user->name}}</span>
             </div>
-            <div class="row mt-5">
-                <span class="text-black-50">{{$user->email}}</span></div>
+            <div class="row mt-4">
+                <span  id = 'email_desc' class="text-black-50">{{$user->email}}</span></div>
             </div>
             <div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="button">Log Out</button></div>
         </div>
