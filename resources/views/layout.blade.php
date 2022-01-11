@@ -78,7 +78,7 @@
                         <button type="button" class="btn btn-primary btn-lg">Login</button>
                     </a>
                 @else
-                    <a href="/login">
+                    <a href="{{route('show-profile')}}">
                         <button type="button" class="btn btn-primary btn-lg">Update Profile</button>
                     </a>
                 @endif

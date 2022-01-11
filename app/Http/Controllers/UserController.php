@@ -45,4 +45,16 @@ class UserController extends Controller
 
         return redirect()->back();
     }
+
+    public function profile(){
+        $user = Auth::user();
+        return view('editprofile', ['user' => $user]);
+    }
+
+    public function update(Request $request){
+        $user = User::find(Auth::user()->id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        return redirect()->back();
+    }
 }

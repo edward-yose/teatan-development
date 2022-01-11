@@ -49,13 +49,13 @@
         <div class="col-md-4 border-right">
             <div class="row mt-2">
                 <div class="d-flex flex-coluamn align-items-center text-center p-3 py-5">
-            </div>     
+            </div>
             <div class="row mt-2">
-                <span class="font-weight-bold">John Doe</span>
-            </div> 
+                <span class="font-weight-bold">{{$user->name}}</span>
+            </div>
             <div class="row mt-5">
-                <span class="text-black-50">email@email.com</span></div>
-            </div> 
+                <span class="text-black-50">{{$user->email}}</span></div>
+            </div>
             <div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="button">Log Out</button></div>
         </div>
         <div class="col-md-8">
@@ -71,24 +71,18 @@
                     <h1 class="text-center">Edit Personal Profile</h1>
                 </div>
 
-                <div class="row mt-2">
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="full name" value=""></div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Email" value=""></div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-md-6"><input type="text" class="form-control" value="" placeholder="Phone number"></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6"><input type="password" class="form-control" value="" placeholder="New Password"></div>
-                </div>  
-                <div class="row mt-3">
-                    <div class="col-md-6"><input type="password" class="form-control" value="" placeholder="Confirm Password"></div> 
-                </div> 
-                <div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                <form action="{{route('update-profile')}}" method="post">
+                    @csrf
+                    <div class="row mt-2">
+                        <div class="col-md-6"><input type="text" class="form-control" placeholder="full name" value="{{$user->name}}"></div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6"><input type="text" class="form-control" placeholder="Email" value="{{$user->email}}"></div>
+                    </div>
+                    <div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                </form>
 
-                
+
             </div>
         </div>
     </div>

@@ -34,9 +34,9 @@ Route::get('/cart', [\App\Http\Controllers\CartController::class,'get']);
 
 Route::post('/checkout', [\App\Http\Controllers\CartController::class, 'checkout'])->name('checkout');
 
-Route::get('/editprofile', function () {
-    return view('editprofile');
-});
+Route::get('/editprofile', [\App\Http\Controllers\UserController::class, 'profile'])->name('show-profile');
+
+Route::post('/editprofile',[\App\Http\Controllers\UserController::class, 'update'])->name('update-profile');
 
 Route::get('/pay', function () {
     return view('qris');
@@ -47,4 +47,5 @@ Route::get('/payment', function () {
 });
 
 Route::get('/addtocart/{id}', [\App\Http\Controllers\MenuController::class, 'addToCart'])->name('addToCart');
+
 
