@@ -19,8 +19,9 @@ class UserSeeder extends Seeder
             \DB::table('users')->insert([
                 'email' => 'client'.$i.'@gmail.com',
                 'password' => bcrypt('client123'),
-                'fullName' => $faker->name,
-                'phoneNumber' => '+628'.$faker->numberBetween(111111111,9999999)
+                'name' => $faker->name,
+                
+                // 'phoneNumber' => '+628'.$faker->numberBetween(111111111,9999999)
             ]);
         }
     }

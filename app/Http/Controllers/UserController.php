@@ -26,7 +26,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect()->back();
+        return view('login');
     }
 
     public function login(Request $request){
