@@ -73,6 +73,15 @@
                         <a class="nav-link active" style="color: white" href="{{route('show-menu')}}"><p>Menu</p>  <span
                                 class="sr-only">(current)</span></a>
                     </li>
+                    <li class="nav-item active">
+                        <a class="nav-link active" style="color: white" href="{{route('cart')}}"><p>Cart</p>  <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link active" style="color: white" href=""><p>Transacion History</p>  <span
+                                class="sr-only">(current)</span></a>
+                    </li>
                 @endif
                 <li class="nav-item active">
                     <a class="nav-link" href="/" style="color: white"><p>About Us</p></a>

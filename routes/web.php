@@ -30,7 +30,7 @@ Route::get('/register', function () {
 });
 Route::post('/register', [\App\Http\Controllers\UserController::class, 'create'])->name('create-user');
 
-Route::get('/cart', [\App\Http\Controllers\CartController::class,'get']);
+Route::get('/cart', [\App\Http\Controllers\CartController::class,'get'])->name('cart');
 
 Route::post('/checkout', [\App\Http\Controllers\CartController::class, 'checkout'])->name('checkout');
 
@@ -48,4 +48,11 @@ Route::get('/payment', function () {
 
 Route::get('/addtocart/{id}', [\App\Http\Controllers\MenuController::class, 'addToCart'])->name('addToCart');
 
+Route::get('/transactionhist', function () {
+    return view('transhist');
+});
+
+Route::get('/transactiondet', function () {
+    return view('transdetail.blade');
+});
 

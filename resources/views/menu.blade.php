@@ -46,12 +46,13 @@
     <div class="container">
         <div class="row ">
             @foreach($drinks as $drink)
-            <div class="col-md-4">
+            <div class="col-md-4"style="padding-top: 1rem">
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" style="background-color: #FBC095" src="{{url('/storage/'.$drink->photo)}}" alt="Card image cap">
                     <div class="card-body" style="background-color: #FF5C00 ;color: white">
                         <h5 class="card-title">{{$drink->name}}</h5>
                         <p class="card-text">{{$drink->description}}</p>
+                        <p class="card-text" style="font-size: 1rem">Rp. {{$drink->price}}</p>
                         <form action="{{route('addToCart', $drink->id)}}" method="get">
                             @csrf
                             <button type="submit" class="btn btn-primary">Add to Cart</button>
