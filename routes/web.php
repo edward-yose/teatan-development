@@ -44,5 +44,8 @@ Route::post('/checkout', [\App\Http\Controllers\TransactionController::class, 'a
 Route::get('/change-password', [\App\Http\Controllers\PasswordController::class, 'get'])->name('show-change-password')->middleware(['auth']);
 Route::post('/change-password', [\App\Http\Controllers\PasswordController::class, 'update'])->name('update-password')->middleware(['auth']);
 
+Route::get('/about-us', function () {
+    return view('aboutUs');
+});
 
 require __DIR__.'/auth.php';
