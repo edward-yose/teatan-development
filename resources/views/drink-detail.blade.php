@@ -37,15 +37,7 @@
                         </div>
                     </div>
 
-                    <div class="row" style="margin-top: 10px">
-                        <div class="col">
-                            Author
-                        </div>
-
-                        <div class="col">
-                            {{$drink->author}}
-                        </div>
-                    </div>
+              
 
                     <div class="row" style="margin-top: 10px">
                         <div class="col">
