@@ -24,7 +24,7 @@ class CartController extends Controller
         }else{
             $cart = new Cart();
             $cart->user_id = Auth::user()->id;
-            $cart->book_id = $id;
+            $cart->drink_id = $id;
             $cart->quantity = $req->quantity;
             $cart->save();
         }

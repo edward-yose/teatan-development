@@ -22,9 +22,6 @@
             Book Name
         </div>
 
-        <div class="col fw-bold">
-            Book Author
-        </div>
 
         <div class="col fw-bold">
             Price
@@ -53,13 +50,10 @@
                 {{$cart->drink->name}}
             </div>
             <div class="col">
-                {{$cart->drink->author}}
-            </div>
-            <div class="col">
                 IDR {{$cart->drink->price}}
             </div>
             <div class="col">
-                {{$cart->quantity}} Book
+                {{$cart->quantity}} 
             </div>
             <div class="col">
                 IDR {{$cart->quantity * $cart->drink->price}}
