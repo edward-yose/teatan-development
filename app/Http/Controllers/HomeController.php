@@ -12,4 +12,10 @@ class HomeController extends Controller
         $drink = Drink::paginate(6);
         return view('home', ['drinks' => $drink]);
     }
+
+    public function searchDrink(Request $request){
+        $query = $request->search;
+        $drink = Drink::where('name','LIKE',"%$query%")->paginate(6);
+        return view('home',['drinks'=>$drink]);
+    }
 }
