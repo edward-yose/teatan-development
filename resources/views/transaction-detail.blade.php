@@ -18,11 +18,9 @@
         <div class="col fw-bold">
             Drink Name
         </div>
-
         <div class="col fw-bold">
             Price
         </div>
-
         <div class="col fw-bold">
             Quantity
         </div>
@@ -45,10 +43,6 @@
 
         <div class="col">
             {{$detail->drink->name}}
-        </div>
-
-        <div class="col">
-            {{$detail->drink->author}}
         </div>
 
         <div class="col">
