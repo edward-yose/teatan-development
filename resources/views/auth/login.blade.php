@@ -1,8 +1,9 @@
+
 <x-guest-layout>
     <x-auth-card>
-        <x-slot name="logo">
+        <x-slot name="logo" >
             <a href="/">
-                <div>Login</div>
+                <img style="width: 50%; "src="{{Storage::url("TeatanFULL.png")}}"class="mx-auto">
             </a>
         </x-slot>
 
@@ -17,6 +18,7 @@
 
             <!-- Email Address -->
             <div>
+                <h2 class="mb-4">Login</h2>
                 <x-label for="email" :value="__('Email')" />
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
