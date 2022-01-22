@@ -53,13 +53,13 @@
 
         <div class="col">
             <form method="get" action="{{route('show-user-detail', $user->id)}}">
-                <button class="btn btn-primary bg-secondary border-0" type="submit">View Detail</button>
+                <button class="btn btn-primary bg-secondary border-0" type="submit" style="margin-bottom: 2%">View Detail</button>
             </form>
             @if($user->role != 'admin')
             <form method="post" action="{{route('delete-user', $user->id)}}">
                 @csrf
                 {{ method_field('DELETE') }}
-                <button class="btn btn-primary bg-danger border-0" type="submit">Delete</button>
+                <button class="btn btn-primary bg-danger border-0" type="submit"  style="margin-bottom: 2%">Delete</button>
             </form>
             @endif
         </div>

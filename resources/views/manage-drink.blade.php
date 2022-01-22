@@ -48,7 +48,7 @@
     </form>
 </div>
 
-<div class="container" style="margin-top: 50px">
+<div class="container" style="margin-top: 50px" >
     <div class="row">
         <div class="col fw-bold">
             Name
@@ -70,7 +70,7 @@
     <hr style="border: 1px solid black">
 </div>
 
-<div class="container mb-5">
+<div class="container mb-5" >
     @foreach($drinks as $drink)
         <div class="row">
             <div class="col">
@@ -95,6 +95,7 @@
                     <button class="btn btn-primary bg-danger border-0"style="margin: 2%" type="submit">Delete</button>
                 </form>
             </div>
+            <hr>
         </div>
     @endforeach
 
