@@ -16,32 +16,32 @@ class DrinkSeeder extends Seeder
     {
         Drink::create([
             'name' => 'UltimaThai Tea',
-            'cover' => '1.jpg',
+            'cover' => 'ThaiTea.png',
             'price' => 20000
         ]);
         Drink::create([
             'name' => 'Matchazilla',
-            'cover' => '2.jpg',
+            'cover' => 'matcha.png',
             'price' => 20000
         ]);
         Drink::create([
             'name' => 'Blushing Tea',
-            'cover' => '3.jpg',
+            'cover' => 'blushing.png',
             'price' => 25000
         ]);
         Drink::create([
             'name' => 'Ban Tea',
-            'cover' => '4.jpg',
+            'cover' => 'BanTea.png',
             'price' => 25000
         ]);
         Drink::create([
             'name' => 'Toxic Tea',
-            'cover' => '5.jpg',
+            'cover' => 'Toxic.png',
             'price' => 20000
         ]);
         Drink::create([
             'name' => 'STM',
-            'cover' => '6.jpg',
+            'cover' => 'STM.png',
             'price' => 15000
         ]);
 
