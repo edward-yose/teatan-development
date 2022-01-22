@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\Models\Book;
+use App\Models\Drink;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function get(){
-        $drinks = Product::all();
-        return view('home', ['drinks' => $drinks]);
+        $drink = Drink::paginate(5);
+        return view('home', ['books' => $drink]);
     }
 }

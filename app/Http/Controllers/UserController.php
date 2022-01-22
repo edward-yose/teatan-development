@@ -4,57 +4,46 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rule;
+use phpDocumentor\Reflection\DocBlock\Description;
 
 class UserController extends Controller
 {
-    public function create(Request $request)
-    {
-        $request->validate([
-            'name' => ['required'],
-            'email' => ['required'],
-            'password' => ['required'],
-            'password_confirmation' => ['required', 'same:password']
-        ]);
-
-        $user = new User();
-
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = Hash::make($request->password);
-
-        $user->save();
-
-        return view('login');
+    public function get(){
+        $users = User::all();
+        return view('manage-user', ['users' => $users]);
     }
 
-    public function login(Request $request){
+    public function getDetail($id){
+        $user = User::find($id);
+        return view('user-detail', ['user' => $user]);
+    }
 
-
-        $request->validate([
-           'email' => 'required',
-           'password' => 'required'
+    public function update(Request $req, $id){
+        $req->validate([
+            'email' => ['required', 'email', Rule::unique('users')->ignore($id)],
+            'name' => ['required'],
+            'role' => ['required','in:admin,user']
         ]);
 
-        $credential = $request->only(['email', 'password']);
+        $user = User::find($id);
+        $user->name = $req->name;
+        $user->email = $req->email;
+        $user->role = $req->role;
+        $user->save();
+        return redirect()->back();
+    }
 
-        if(Auth::attempt($credential)){
-            return redirect()->route('show-home');
+    public function delete($id){
+        $user = User::find($id);
+
+        if(isset($user)){
+            $user->delete();
+            return redirect()->back()->withErrors('Genre Deleted');
         }
 
         return redirect()->back();
     }
 
-    public function profile(){
-        $user = Auth::user();
-        return view('editprofile', ['user' => $user]);
-    }
 
-    public function update(Request $request){
-        $user = User::find(Auth::user()->id);
-        $user->name = $request->name;
-        $user->email = $request->email;
-        return redirect()->back();
-    }
 }

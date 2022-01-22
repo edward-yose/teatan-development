@@ -3,43 +3,53 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
-use App\Models\TransactionDetail;
-use App\Models\TransactionHeader;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
     public function get(){
-        $carts = Cart::where('email', Auth::user()->email)->get();
+        $carts = Cart::all()->where('user_id', Auth::user()->id);
         return view('cart', ['carts' => $carts]);
     }
 
-    public function checkout(){
+    public function add(Request $req, $id){
+        $req->validate([
+           'quantity' => ['required', 'min:1']
+        ]);
 
-        $carts = Cart::where('email', Auth::user()->email)->get();
-
-        $transaction = new TransactionHeader();
-        $transaction->email = Auth::user()->email;
-        $transaction->total = 0;
-        $transaction->save();
-
-        $total = 0;
-
-        foreach ($carts as $cart){
-            $detail = new TransactionDetail();
-            $detail->productId = $cart->productId;
-            $detail->quantity = $cart->quantity;
-            $detail->total = $cart->quantity * $cart->product->price;
-            $total = $total + $detail->total;
-            $detail->save();
+        if(Cart::where('drink_id', $id)->where('user_id', Auth::user()->id)->update(['quantity' => $req->quantity]) == 1){
+            Cart::where('drink_id', $id)->where('user_id', Auth::user()->id)->update(['quantity' => $req->quantity]);
+        }else{
+            $cart = new Cart();
+            $cart->user_id = Auth::user()->id;
+            $cart->book_id = $id;
+            $cart->quantity = $req->quantity;
+            $cart->save();
         }
+        return redirect()->back();
+    }
 
-        Cart::where('email', Auth::user()->email)->delete();
+    public function update(Request $req, $id){
+        $req->validate([
+            'quantity' => ['required', 'min:1']
+        ]);
+        Cart::find($id)->update(['quantity' => $req->quantity]);
+        return redirect()->back();
+    }
 
-        $transaction->total = $total;
-        $transaction->save();
+    public function delete($id){
+        $cart = Cart::find($id);
 
-        return view('qris', ['total' => $total]);
+        if(isset($cart)){
+            $cart->delete();
+        }
+        return redirect()->back();
+    }
+
+    public function getEdit($id){
+        $cart = Cart::find($id);
+        return view('edit-cart', ['cart' => $cart]);
     }
 }

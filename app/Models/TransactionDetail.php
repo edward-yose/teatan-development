@@ -8,14 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class TransactionDetail extends Model
 {
     use HasFactory;
-    protected $table= "transactionDetail";
-    protected $fillable = [];
-    public $timestamps = false;
 
-    public function product(){
-        return $this->hasmany(Product::class);
+    protected $table = 'transactiondetails';
+
+    public function transaction(){
+        return $this->belongsTo(Transaction::class);
     }
-    public function transactionHeader(){
-        return $this->hasOne(transactionHeader::class);
+
+    public function drink(){
+        return $this->belongsTo(Drink::class);
     }
 }
