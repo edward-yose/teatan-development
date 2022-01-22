@@ -1,6 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: lightskyblue">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(255, 92, 0);">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/">Store Book</a>
+        <a class="navbar-brand" href="/">
+            <img src="{{Storage::url("TeatanFULL.png")}}" alt="" style="width: 35%">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
