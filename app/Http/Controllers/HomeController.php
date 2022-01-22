@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function get(){
-        $drink = Drink::paginate(5);
+        $drink = Drink::paginate(6);
         return view('home', ['drinks' => $drink]);
     }
 }
