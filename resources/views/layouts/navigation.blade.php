@@ -18,6 +18,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/login')}}" style="color: black">Login</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/about-us')}}" style="color: black">About Us</a>
+                    </li>
                 @elseif(Auth::user()->role == 'admin')
                     <li class="nav-item">
                         <div class="dropdown">
@@ -40,6 +43,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('show-transactions')}}" style="color: black">View Transaction History</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/about-us')}}" style="color: black">About Us</a>
+                    </li>
+                    
                 @endif
 
                 @if(Auth::user())
