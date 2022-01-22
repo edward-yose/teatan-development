@@ -16,11 +16,11 @@ class TransactionDetailTable extends Migration
         Schema::create('transactiondetails', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('transaction_id');
-            $table->unsignedBigInteger('book_id');
+            $table->unsignedBigInteger('drink_id');
             $table->integer('quantity');
             $table->integer('subtotal');
             $table->foreign('transaction_id')->references('id')->on('transactions')->onDelete('cascade');
-            $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
+            $table->foreign('drink_id')->references('id')->on('drinks')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ class TransactionDetailTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('transactiondetails');
     }
 }
