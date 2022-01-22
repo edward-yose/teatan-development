@@ -17,7 +17,7 @@
                     <h5 class="card-title">{{$drink->name}}</h5>
                     <div class="card-text">{{$drink->author}}</div>
                     <div class="card-text">{{$drink->price}}</div>
-                    <form method="get" action="{{route('show-book-detail', $drink->id)}}">
+                    <form method="get" action="{{route('show-drink-detail', $drink->id)}}">
                         <button type="submit" class="btn btn-primary">View Detail</button>
                     </form>
                 </div>

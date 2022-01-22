@@ -10,6 +10,6 @@ class HomeController extends Controller
 {
     public function get(){
         $drink = Drink::paginate(5);
-        return view('home', ['books' => $drink]);
+        return view('home', ['drinks' => $drink]);
     }
 }
