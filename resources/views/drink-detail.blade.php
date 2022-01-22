@@ -89,7 +89,7 @@
         @endif
 
         @if(!Auth::guest() && Auth::user()->role == 'admin')
-            <form method="post" action="{{route('update-drink-detail', $drink->id)}}">
+            <form method="post" action="{{route('update-drink-detail', $drink->id)}}" enctype="multipart/form-data">
                 @csrf
                 <div class="row mb-3">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Name:</label>

@@ -21,7 +21,7 @@ Route::get('/home', [\App\Http\Controllers\HomeController::class, 'get'])->name(
 Route::get('/manage-drink', [\App\Http\Controllers\DrinkController::class, 'get'])->name('show-drink')->middleware(['auth', 'admin']);
 Route::get('/drink-detail/{id}', [\App\Http\Controllers\DrinkController::class, 'getDetail'])->name('show-drink-detail');
 Route::post('/manage-drink', [\App\Http\Controllers\DrinkController::class, 'add'])->name('add-drink')->middleware(['auth', 'admin']);
-Route::post('/drink-detail/{id}', [\App\Http\Controllers\DrinkController::class, ''])->name('update-drink-detail')->middleware(['auth', 'admin']);
+Route::post('/drink-detail/{id}', [\App\Http\Controllers\DrinkController::class, 'update'])->name('update-drink-detail')->middleware(['auth', 'admin']);
 Route::delete('/manage-drink/{id}', [\App\Http\Controllers\DrinkController::class, 'delete'])->name('delete-drink')->middleware(['auth', 'admin']);
 
 Route::get('/manage-user',[\App\Http\Controllers\UserController::class,'get'])->name('show-user')->middleware(['auth', 'admin']);;
