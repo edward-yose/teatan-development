@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Manage Book</title>
+    <title>Manage Drink</title>
 </head>
 <body>
 
@@ -17,7 +17,7 @@
     <form action="{{route('add-drink')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row mb-3">
-            <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Drink Name</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" id="name" name="name">
             </div>
@@ -38,7 +38,7 @@
         </div>
 
         <div class="row mb-3">
-            <label for="" class="col-sm-2 col-form-label">Cover</label>
+            <label for="" class="col-sm-2 col-form-label">Drink Image</label>
             <div class="col-sm-10">
                 <input class="form-control" type="file" id="cover" name="cover">
             </div>

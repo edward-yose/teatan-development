@@ -19,7 +19,7 @@
 
     <br>
 
-    <div class="container" style=" height:22rem;">
+    <div class="container" style=" height:100%">
         @if(Auth::guest() || Auth::user()->role == 'user')
             <div class="row">
                 <div class="col-4">
@@ -92,7 +92,7 @@
             <form method="post" action="{{route('update-drink-detail', $drink->id)}}">
                 @csrf
                 <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Name:</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="name" name="name" value="{{$drink->name}}">
                     </div>
@@ -100,7 +100,7 @@
 
 
                 <div class="row mb-3">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Description</label>
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Description:</label>
                     <div class="col-sm-10">
                         <textarea class="form-control" id="synopsis" name="synopsis"
                                   rows="3">{{$drink->synopsis}}</textarea>
@@ -115,11 +115,11 @@
                     </div>
                 </div>
 
-                <div class="row mb-3">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Cover</label>
-                    <div class="col-sm-10">
-                        <img style="width: 300px; height: 300px" src="{{Storage::url($drink->cover)}}">
-                        <input class="form-control" type="file" id="cover" name="cover">
+                <div class="row mb-10">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Drink Image:</label>
+                    <div class="col-sm-10" >
+                        <img style="width: 150px; height: 250px; padding-bottom: 1rem" src="{{Storage::url($drink->cover)}}">
+                        <input class="form-control pt-10" type="file" id="cover" name="cover">
                     </div>
                 </div>
 
