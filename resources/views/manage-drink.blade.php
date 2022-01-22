@@ -24,14 +24,7 @@
         </div>
 
         <div class="row mb-3">
-            <label for="" class="col-sm-2 col-form-label">Author</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="author" name="author">
-            </div>
-        </div>
-
-        <div class="row mb-3">
-            <label for="" class="col-sm-2 col-form-label">Synopsis</label>
+            <label for="" class="col-sm-2 col-form-label">Description</label>
             <div class="col-sm-10">
                 <textarea class="form-control" id="synopsis" name="synopsis" rows="3"></textarea>
             </div>
@@ -62,10 +55,6 @@
         </div>
 
         <div class="col fw-bold">
-            Author
-        </div>
-
-        <div class="col fw-bold">
             Synopsis
         </div>
 
@@ -89,10 +78,6 @@
             </div>
 
             <div class="col">
-                {{$drink->author}}
-            </div>
-
-            <div class="col">
                 <p style="text-overflow: ellipsis">{{$drink->synopsis}}</p>
             </div>
 
@@ -110,7 +95,6 @@
                     <button class="btn btn-primary bg-danger border-0" type="submit">Delete</button>
                 </form>
             </div>
-            4
         </div>
     @endforeach
 
