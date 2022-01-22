@@ -2,11 +2,13 @@
 
 @include('layouts.navigation')
 
-<form class="form-inline" method="POST" action="/home">
-    @csrf
-    <input class="form-control mr-sm-3" style="width: 90%"; type="search" placeholder="Search" aria-label="Search" name="search" id="search">
-    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-</form>
+<div style="margin-left: 10%">
+    <form class="form-inline" method="POST" action="/home">
+        @csrf
+        <input class="form-control mr-sm-3" style="width: 90%; margin-top: 1rem;margin-bottom: 1rem" type="search" placeholder="Search" aria-label="Search" name="search" id="search">
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+    </form>
+</div>
 
 <div class="row row-cols-1 row-cols-md-3 g-4" style="margin-top: 50px; margin-left: 300px; margin-right: 300px">
     @foreach($drinks as $drink)
@@ -19,7 +21,7 @@
                     <div class="card-text">{{$drink->author}}</div>
                     <div class="card-text">{{$drink->price}}</div>
                     <form method="get" action="{{route('show-drink-detail', $drink->id)}}">
-                        <button type="submit" class="btn btn-primary">View Detail</button>
+                        <button style="margin-top: 1rem" type="submit" class="btn btn-primary">View Detail</button>
                     </form>
                 </div>
             </div>
