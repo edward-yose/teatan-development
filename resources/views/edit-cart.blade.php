@@ -15,7 +15,7 @@
 
 <div class="container border p-2" style="margin-top: 50px">
 
-    <h2>{{$cart->drink->name}}</h2>
+    <h2>{{$cart->drink->name}} </h2>
 
     <br>
 
