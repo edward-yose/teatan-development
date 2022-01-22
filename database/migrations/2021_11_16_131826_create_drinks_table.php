@@ -17,6 +17,7 @@ class CreateDrinksTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('cover');
+            $table->text('synopsis');
             $table->integer('price');
             $table->timestamps();
         });
