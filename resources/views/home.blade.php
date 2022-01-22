@@ -2,9 +2,10 @@
 
 @include('layouts.navigation')
 
-<form class="d-flex" style="margin-top: 50px; margin-left: 300px; margin-right: 300px">
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success" type="submit">Search</button>
+<form class="form-inline" method="POST" action="/home">
+    @csrf
+    <input class="form-control mr-sm-3" style="width: 90%"; type="search" placeholder="Search" aria-label="Search" name="search" id="search">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
 </form>
 
 <div class="row row-cols-1 row-cols-md-3 g-4" style="margin-top: 50px; margin-left: 300px; margin-right: 300px">

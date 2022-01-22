@@ -17,6 +17,7 @@ Route::post('/profile', [\App\Http\Controllers\ProfileController::class,'update'
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'get']);
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'get'])->name('home');
+Route::post('/home', [\App\Http\Controllers\HomeController::class, 'searchDrink'])->name('home');
 
 Route::get('/manage-drink', [\App\Http\Controllers\DrinkController::class, 'get'])->name('show-drink')->middleware(['auth', 'admin']);
 Route::get('/drink-detail/{id}', [\App\Http\Controllers\DrinkController::class, 'getDetail'])->name('show-drink-detail');
