@@ -89,7 +89,7 @@
         @endif
 
         @if(!Auth::guest() && Auth::user()->role == 'admin')
-            <form method="post" action="{{route('update-book-detail', $drink->id)}}">
+            <form method="post" action="{{route('update-drink-detail', $drink->id)}}">
                 @csrf
                 <div class="row mb-3">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
@@ -98,45 +98,15 @@
                     </div>
                 </div>
 
-                <div class="row mb-3">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Author</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="author" name="author" value="{{$drink->author}}">
-                    </div>
-                </div>
 
                 <div class="row mb-3">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Synopsis</label>
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Description</label>
                     <div class="col-sm-10">
                         <textarea class="form-control" id="synopsis" name="synopsis"
                                   rows="3">{{$drink->synopsis}}</textarea>
                     </div>
                 </div>
 
-                <div class="row mb-3">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Genre</label>
-                    <div class="col-sm-10">
-                        @foreach($genres as $genre)
-                            @foreach($drink->genres as $bgenre)
-                            <div class="form-check">
-                                @if(in_array($genre, $drink->genres))
-                                    <input class="form-check-input" type="checkbox" id="gridCheck1" name="genres[]"
-                                           value="{{$genre->id}}" checked>
-                                    <label class="form-check-label" for="gridCheck1">
-                                        {{$genre->name}}
-                                    </label>
-                                @else
-                                    <input class="form-check-input" type="checkbox" id="gridCheck1" name="genres[]"
-                                           value="{{$genre->id}}">
-                                    <label class="form-check-label" for="gridCheck1">
-                                        {{$genre->name}}
-                                    </label>
-                                @endif
-                            </div>
-                            @endforeach
-                        @endforeach
-                    </div>
-                </div>
 
                 <div class="row mb-3">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Price</label>
