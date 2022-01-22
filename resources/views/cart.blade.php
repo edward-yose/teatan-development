@@ -63,17 +63,17 @@
             </div>
             <div class="col">
                 <form method="get" action="{{route('show-drink-detail', $cart->drink->id)}}">
-                    <button class="btn btn-primary bg-secondary border-0" type="submit">View Drink Detail</button>
+                    <button class="btn btn-primary bg-secondary border-0" style="margin: 2%" type="submit">View Drink Detail</button>
                 </form>
 
                 <form method="get" action="{{route('show-edit-item', $cart->id)}}">
-                    <button class="btn btn-primary bg-info border-0" type="submit">Edit Quantity</button>
+                    <button class="btn btn-primary bg-info border-0" style="margin: 2%" type="submit">Edit Quantity</button>
                 </form>
 
                 <form method="post" action="{{route('delete-item', $cart->id)}}">
                     @csrf
                     {{method_field('DELETE')}}
-                    <button class="btn btn-primary bg-danger border-0" type="submit">Remove</button>
+                    <button class="btn btn-primary bg-danger border-0" style="margin: 2%" type="submit">Remove</button>
                 </form>
             </div>
             <hr>
