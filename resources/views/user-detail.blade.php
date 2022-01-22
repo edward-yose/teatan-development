@@ -45,12 +45,12 @@
                     @else
                         <option value="admin" selected>Admin</option>
                         <option value="user">User</option>
+                        <button type="submit" class="btn btn-primary">Update</button>
                     @endif
                 </select>
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Update</button>
     </form>
 </div>
 
