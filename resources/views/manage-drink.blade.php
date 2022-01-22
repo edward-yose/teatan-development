@@ -87,12 +87,12 @@
 
             <div class="col">
                 <form method="get" action="{{route('show-drink-detail', $drink->id)}}">
-                    <button class="btn btn-primary bg-secondary border-0" type="submit">View Detail</button>
+                    <button class="btn btn-primary bg-secondary border-0" style="margin: 2%" type="submit">View Detail</button>
                 </form>
                 <form method="post" action="{{route('delete-drink', $drink->id)}}">
                     @csrf
                     {{method_field('DELETE')}}
-                    <button class="btn btn-primary bg-danger border-0" type="submit">Delete</button>
+                    <button class="btn btn-primary bg-danger border-0"style="margin: 2%" type="submit">Delete</button>
                 </form>
             </div>
         </div>
