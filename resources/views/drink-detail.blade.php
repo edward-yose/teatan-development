@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Book Detail User</title>
+    <title>Drink Detail</title>
 </head>
 <body style="padding-bottom: 120px;">
 
@@ -15,21 +15,21 @@
 
 <div class="container border p-2" style="margin-top: 50px">
 
-    <h2>{{$drink->name}} Book Detail</h2>
+    <h2>{{$drink->name}} Detail</h2>
 
     <br>
 
-    <div class="container">
+    <div class="container" style=" height:22rem;">
         @if(Auth::guest() || Auth::user()->role == 'user')
             <div class="row">
                 <div class="col-4">
-                    <img style="width: 300px; height: 300px" src="{{Storage::url($drink->cover)}}">
+                    <img style="width: 170px; height: 300px" src="{{Storage::url($drink->cover)}}">
                 </div>
 
                 <div class="col-8">
                     <div class="row">
                         <div class="col">
-                            Name
+                            Name:
                         </div>
 
                         <div class="col">
@@ -41,7 +41,7 @@
 
                     <div class="row" style="margin-top: 10px">
                         <div class="col">
-                            Synopsis
+                            Description:
                         </div>
 
                         <div class="col">
@@ -51,7 +51,7 @@
 
                     <div class="row" style="margin-top: 10px">
                         <div class="col">
-                            Price
+                            Price:
                         </div>
 
                         <div class="col">
