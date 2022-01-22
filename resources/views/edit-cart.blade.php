@@ -15,14 +15,14 @@
 
 <div class="container border p-2" style="margin-top: 50px">
 
-    <h2>{{$cart->drink->name}} Book Detail</h2>
+    <h2>{{$cart->drink->name}}</h2>
 
     <br>
 
     <div class="container">
         <div class="row">
             <div class="col-4">
-                Cover Image
+                <img src="{{Storage::url($cart->drink->cover)}}" class="card-img-top">
             </div>
 
             <div class="col-8">
@@ -36,35 +36,14 @@
                     </div>
                 </div>
 
-                <div class="row" style="margin-top: 10px">
-                    <div class="col">
-                        Author
-                    </div>
-
-                    <div class="col">
-                        {{$cart->drink->author}}
-                    </div>
-                </div>
 
                 <div class="row" style="margin-top: 10px">
                     <div class="col">
-                        Synopsis
+                        Description
                     </div>
 
                     <div class="col">
                         {{$cart->drink->synopsis}}
-                    </div>
-                </div>
-
-                <div class="row" style="margin-top: 10px">
-                    <div class="col">
-                        Genre(s)
-                    </div>
-
-                    <div class="col">
-                        @foreach($cart->drink->genres as $genre)
-                        {{$genre->name}}
-                        @endforeach
                     </div>
                 </div>
 

@@ -24,10 +24,10 @@ class TransactionController extends Controller
         foreach ($carts as $cart){
             $detail = new TransactionDetail();
             $detail->quantity = $cart->quantity;
-            $detail->subtotal = $cart->quantity * $cart->book->price;
-            $detail->book_id = $cart->book->id;
+            $detail->subtotal = $cart->quantity * $cart->drink->price;
+            $detail->drink_id = $cart->drink->id;
             $detail->transaction_id = $transaction->id;
-            $grand_total += $cart->quantity * $cart->book->price;
+            $grand_total += $cart->quantity * $cart->drink->price;
             $detail->save();
         }
 
