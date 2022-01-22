@@ -7,6 +7,7 @@ use App\Models\Drink;
 use App\Models\Genre;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class DrinkController extends Controller
 {
@@ -55,7 +56,32 @@ class DrinkController extends Controller
     }
 
     public function update(Request $req, $id){
-        dd($req->cover);
+        $drink = Drink::find($id);
+        Validator::make($req->all(),[
+            'name' => 'required',
+            'synopsis' => 'required',
+            'cover' => 'image',
+            'price'=> 'required|numeric'
+        ])->validate();
+        $drink->name = $req->name;
+        $drink->synopsis = $req->synopsis;
+        $drink->price = $req->price;
+        $image = $req->file('cover');
 
+        if($image != null)
+        {
+            $CoverName = time() . '.' . $image->getClientOriginalExtension();
+            Storage::putFileAs('public', $image,$CoverName);
+            Storage::delete('/public',$drink->cover);
+            $drink->cover = $CoverName;
+        }
+        else{
+            $req->cover = $drink->cover;
+        }
+        $drink->save();
+    
+        return redirect()->back(); 
     }
+
+    
 }
