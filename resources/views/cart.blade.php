@@ -19,7 +19,7 @@
 <div class="container" style="margin-top: 50px">
     <div class="row">
         <div class="col fw-bold">
-            Book Name
+            Drink Name
         </div>
 
 
@@ -53,7 +53,7 @@
                 IDR {{$cart->drink->price}}
             </div>
             <div class="col">
-                {{$cart->quantity}} 
+                {{$cart->quantity}}
             </div>
             <div class="col">
                 IDR {{$cart->quantity * $cart->drink->price}}

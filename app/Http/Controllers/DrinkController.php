@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Book;
 use App\Models\Drink;
-use App\Models\Genre;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
@@ -79,9 +77,9 @@ class DrinkController extends Controller
             $req->cover = $drink->cover;
         }
         $drink->save();
-    
-        return redirect()->back(); 
+
+        return redirect()->back();
     }
 
-    
+
 }
